@@ -1,33 +1,40 @@
-const inputElement = document.querySelector('.searchInput');
+
+function openLoading() {
+    document.body.classList.add("loading");
+}
+
+
+const inputElement = document.querySelector(".searchInput");
 const formElement = document.querySelector("form");
-const resultsElement = document.querySelector(".searchResults");
+const resultsElement = document.querySelector(".movies");
 
 formElement.addEventListener("submit", async (event) => {
-event.preventDefault();
-resultsElement.innerHTML = "";
-// const inputValue = inputElement.value;
-const response = await fetch(
-    `http://www.omdbapi.com/?i=tt3896198&apikey=43083548${inputValue}`,);
+  event.preventDefault();
+  resultsElement.innerHTML ="";
+  const inputValue = inputElement.value;
+  const response = await fetch(
+    `http://www.omdbapi.com/?s=${inputValue}&apikey=43083548`,
+  );
 
-const data = await response.json();
-// console.log(data);
-if (data.response === "False"){
-    return;}
-const movies = data.Search;
-movies.forEach((movie) => {
+  const data = await response.json();
+  if (data.response === "False") {
+    return;
+  }
+  const movies = data.Search;
+  movies.forEach((movie) => {
     resultsElement.innerHTML += `
     <div class="movie">
-        <img src="${movie.Poster}" alt="${movie.Title}">
-        <h2>${movie.Title}</h2>
-        <p>${movie.Plot}</p>
+        <figure class="movie__wrapper">
+            <img class="movie__img" src="${movie.Poster}" alt="${movie.Title}">
+        </figure>
+        <div class="movie__info">
+            <h2 class="movie__title">${movie.Title}</h2>
+            <p class="movie__year">${movie.Year}</p>
+        </div>
     </div>
     `;
- });
+  });
 });
-
-
-
-
 
 
 
