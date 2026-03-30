@@ -229,7 +229,19 @@
     color: #858383;
 }
 
-
+.search__ways {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#filter {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    
+   
+}
 
 /**********************************MOVIES**********************************/
 

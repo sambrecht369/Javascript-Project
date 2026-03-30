@@ -30,12 +30,19 @@
                 <div class="row">
                     <div class="movie__header">
                         <h2 class="section__title movie__header--title">Browse Movies</h2>
+                        <div class="search__ways">
                         <form class="search__bar">
                             <input type="text" class="searchInput" placeholder="Search movies...">
                             <button class="search__button" >
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
+                        <select id="filter" onchange="filterMovies(event)">
+                                <option value="" disabled selected>Filter</option>
+                                <option value="A-Z">A-Z</option>
+                                <option value="Z-A">Z-A</option>
+                        </select>
+                        </div>
                     </div>
                 </div>
             </div>
