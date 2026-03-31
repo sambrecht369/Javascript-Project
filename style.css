@@ -46,6 +46,7 @@
     width: 100%;
     padding: 20px 50px;
     background-color: black;
+    height: 20vh;
 }
 
 .nav__links {
@@ -176,6 +177,7 @@
     height: 20vh;
     z-index: 0;
     opacity: .3;
+    overflow: hidden;
 }
 
 
@@ -332,4 +334,39 @@
 }
 .footer__link:hover {
     color: #858383;
+}
+
+
+/****************************************************Responsive Design****************************************************/
+
+
+
+@media (max-width: 768px) {
+   
+    .nav__link:nth-child(1) {
+        display: none;
+    }
+    .nav__link:nth-child(3) {
+        display: none;
+    }
+    
+    .home__img {
+        width: 100%;
+        max-width: 400px;
+    }
+    .movie__header {
+        padding: 20px;
+    }
+    .movie__header--title {
+        font-size: 28px;
+    }
+   
+    .movies {
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie {
+        width: 100%;
+        max-width: 300px;
+    }
 }
