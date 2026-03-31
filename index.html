@@ -6,15 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/478a2fb00a.js" crossorigin="anonymous"></script>
-    <script src="style.js" defer></script>
-     
+    <script src="home.js" defer></script>
+</head>
 <body>
     <section>
         <nav>
-            <div class="nav__bg">
-                <img src="assets/wp3160279.jpg" class="nav__img" alt="">
-            </div>
-            <div class="nav__row">
+            <div class="nav__row home__nav">
             <img src="assets/film.jpg" class="logo" alt="Tree Logo">
                <div class="nav__links">
                     <a href="#" class="nav__link">Home</a>
@@ -23,60 +20,31 @@
                 </div>
             </div>
         </nav>
-        </section>
-        <header>
-            <section id="landing">
-            <div class="container">
-                <div class="row">
-                    <div class="movie__header">
-                        <h2 class="section__title movie__header--title">Browse Movies</h2>
-                        <div class="search__ways">
-                        <form class="search__bar">
-                            <input type="text" class="searchInput" placeholder="Search movies...">
-                            <button class="search__button" >
+    </section>
+    <section id="landing" class="home">
+        <div class="container">
+            <div class="row">
+                <div class="movie__header--home">
+                    <h2 class="section__title--home">USA's most popular movie platform</h2>
+                    <p class="section__para--home">Discover the latest movies and TV shows available for streaming.</p>
+                    <form class="home__search__bar">
+                        <input type="text" name="searchInput" class="searchInput home__search__input" placeholder="Search by movie titles...">
+                        <div class="search__button__wrapper">
+                            <button class="home__search__button" type="submit">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                        </form>
-                        <select id="filter" onchange="filterMovies(event)">
-                                <option value="" disabled selected>Filter</option>
-                                <option value="A-Z">A-Z</option>
-                                <option value="Z-A">Z-A</option>
-                        </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        </header>
-        <section id="movies">
-            <div class="container">
-                <div class="row">
-                    <div class="movies">
-                        <div class="movie" >
-                            <figure class="movie__wrapper">
-                                <img src="" class="movie__img" alt="">
-                            </figure>
-                            <div class="movie__info">
-                                <h2 class="movie__title"></h2>
-                                <p class="movie__year"></p>
+                            <div class="loading loading--open" >
+                                <i class="fa-solid fa-spinner"></i>
                             </div>
                         </div>
-                    </div>
+                    </form>
+                </div>
+                <div class="image__wrapper">
+                    <img class="home__img" src="assets/movietime.jpg" alt="">
                 </div>
             </div>
-        </section>
-    <footer>
-        <div class="footer__content">
-            <a href="#" class="footer__logo">
-                <img src="assets/film.jpg" class="footer__img" alt="Tree Logo">
-            </a>
-            <div class="footer__links">
-                <a href="#" class="footer__link">Home</a>
-                <a href="#" class="footer__link">What to watch</a>
-                <a href="#" class="footer__link">Contact</a>
-            </div>
-            <p>&copy; 2026 All Rights Reserved.</p>
         </div>
-    </footer>
+    </section>
+    
 </body>
 </html>
