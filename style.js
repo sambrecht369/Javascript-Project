@@ -29,7 +29,7 @@ formElement.addEventListener("submit", async (event) => {
   resultsElement.innerHTML = "";
   const inputValue = inputElement.value;
   const response = await fetch(
-    `http://www.omdbapi.com/?s=${inputValue}&apikey=43083548`,
+    `https://www.omdbapi.com/?s=${inputValue}&apikey=43083548`,
   );
 
   const data = await response.json();

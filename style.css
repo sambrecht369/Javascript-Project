@@ -349,7 +349,9 @@
     .nav__link:nth-child(3) {
         display: none;
     }
-    
+    .nav__img {
+        display: none;
+    }
     .home__img {
         width: 100%;
         max-width: 400px;
