@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       openLoading();
       const input = document.querySelector('.searchInput');
       const searchValue = input ? input.value : '';
-      window.location.href = `index.html?search=${encodeURIComponent(searchValue)}`;
+      window.location.href = `movies.html?search=${encodeURIComponent(searchValue)}`;
     });
   }
 });
