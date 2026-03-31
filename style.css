@@ -338,7 +338,19 @@
 
 
 /****************************************************Responsive Design****************************************************/
-
+@media (max-width: 1000px) {
+    .movie {
+        width: calc(100% / 3);
+    }
+}
+@media (max-width: 850px) {
+    .movie {
+        width: calc(100% / 2);
+    }
+    .section__title--home {
+        padding: 0 20px;
+    }
+}
 
 
 @media (max-width: 768px) {
@@ -364,11 +376,16 @@
     }
    
     .movies {
-        flex-direction: column;
-        align-items: center;
+        
     }
     .movie {
+        width: calc(100% / 2);
+        
+    }
+}
+
+@media (max-width: 650px) {
+    .movie {
         width: 100%;
-        max-width: 300px;
     }
 }
